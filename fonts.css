@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "apris-1";
+  src: url("assets/fonts/apris/Apris-BoldItalic.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "apris-2";
+  src: url("assets/fonts/apris/Apris-Regular.woff2");
+  font-display: swap;
+}
+
+.header-font-family-1:has(h1) {
+  font-family: "apris-1";
+}
+
+.header-font-family-1:has(h2) {
+  font-family: "apris-2";
+}
+
+@font-face {
+  font-family: "eiko-1";
+  src: url("assets/fonts/eiko/PPEiko-Medium.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "eiko-2";
+  src: url("assets/fonts/eiko/PPEiko-LightItalic.woff2");
+  font-display: swap;
+}
+
+.header-font-family-8:has(h1) {
+  font-family: "eiko-1";
+}
+
+.header-font-family-8:has(h2) {
+  font-family: "eiko-2";
+}
+
+@font-face {
+  font-family: "gaya-1";
+  src: url("assets/fonts/gaya/Gaya.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "gaya-2";
+  src: url("assets/fonts/gaya/Gaya-Italic.woff2");
+  font-display: swap;
+}
+
+.header-font-family-2:has(h1) {
+  font-family: "gaya-1";
+}
+
+.header-font-family-2:has(h2) {
+  font-family: "gaya-2";
+}
+
+@font-face {
+  font-family: "grotesk-remix-1";
+  src: url("assets/fonts/grotesk-remix/GroteskRemix-bold.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grotesk-remix-2";
+  src: url("assets/fonts/grotesk-remix/GroteskRemix-regular.woff2");
+  font-display: swap;
+}
+
+.header-font-family-6:has(h1) {
+  font-family: "grotesk-remix-1";
+}
+
+.header-font-family-6:has(h2) {
+  font-family: "grotesk-remix-2";
+}
+
+@font-face {
+  font-family: "gt-america-1";
+  src: url("assets/fonts/gt-america/GT-America-Standard-Bold.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "gt-america-2";
+  src: url("assets/fonts/gt-america/GT-America-Standard-Regular.woff2");
+  font-display: swap;
+}
+
+.header-font-family-3:has(h1) {
+  font-family: "gt-america-1";
+}
+
+.header-font-family-3:has(h2) {
+  font-family: "gt-america-2";
+}
+
+@font-face {
+  font-family: "microgramma-1";
+  src: url("assets/fonts/microgramma/MicrogrammaBoldExtendedD.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "microgramma-2";
+  src: url("assets/fonts/microgramma/MicrogrammaMediumExtendedD.woff2");
+  font-display: swap;
+}
+
+.header-font-family-5:has(h1) {
+  font-family: "microgramma-1";
+}
+
+.header-font-family-5:has(h2) {
+  font-family: "microgramma-2";
+}
+
+@font-face {
+  font-family: "migra-1";
+  src: url("assets/fonts/migra/PPMigra-Bold.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "migra-2";
+  src: url("assets/fonts/migra/PPMigra-Regular.woff2");
+  font-display: swap;
+}
+
+.header-font-family-7:has(h1) {
+  font-family: "migra-1";
+}
+
+.header-font-family-7:has(h2) {
+  font-family: "migra-2";
+}
+
+@font-face {
+  font-family: "recoleta-1";
+  src: url("assets/fonts/recoleta/Recoleta-Bold.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "recoleta-2";
+  src: url("assets/fonts/recoleta/Recoleta-Regular.woff2");
+  font-display: swap;
+}
+
+.header-font-family-0:has(h1) {
+  font-family: "recoleta-1";
+}
+
+.header-font-family-0:has(h2) {
+  font-family: "recoleta-2";
+}
+
+@font-face {
+  font-family: "shinka-mono-1";
+  src: url("assets/fonts/shinka-mono/ShinkaMono-Bold.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "shinka-mono-2";
+  src: url("assets/fonts/shinka-mono/ShinkaMono-Regular.woff2");
+  font-display: swap;
+}
+
+.header-font-family-4:has(h1) {
+  font-family: "shinka-mono-1";
+}
+
+.header-font-family-4:has(h2) {
+  font-family: "shinka-mono-2";
+}
+
+.header-font-size-s h1,
+.header-font-size-s h2,
+.header-font-size-s h3,
+.header-font-size-s h4 {
+  font-size: 22px;
+
+  + p {
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+}
+
+.header-font-size-m h1,
+.header-font-size-m h2,
+.header-font-size-m h3,
+.header-font-size-m h4 {
+  font-size: 44px;
+
+  + p {
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+}
+
+.header-font-size-l h1,
+.header-font-size-l h2,
+.header-font-size-l h3,
+.header-font-size-l h4 {
+  font-size: 66px;
+
+  + p {
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+}

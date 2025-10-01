@@ -1,0 +1,74 @@
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+p > * {
+  line-height: 1.2;
+}
+
+#prefetch-indicator {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+#slide-wrapper {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+
+  justify-items: center;
+  align-items: center;
+}
+
+#slide {
+  border-radius: 24px;
+  box-shadow:
+    inset 5px 5px 10px white,
+    inset -5px -5px 10px white,
+    inset -5px 5px 10px white,
+    inset 5px -5px 10px white;
+  outline: 4px solid white;
+  outline-offset: -1px;
+}
+
+#slide > div {
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+#slide > div.image {
+  display: block;
+
+  > .text {
+    margin: 4px;
+    border-radius: 6px;
+    padding-inline: 6px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+#slide > div > .text {
+  margin-inline: 8px;
+  width: fit-content;
+}
