@@ -159,9 +159,10 @@ function renderBox(boxId) {
 // ---------------
 
 const urlParams = new URLSearchParams(window.location.search);
-let spaceid =
-  urlParams.get("space") ||
-  "https://kinopio.club/kn-vitrine-ZNXXsP5cFZ5712kFb1vON";
+let spaceid = urlParams.get("space") || "";
+if (!spaceid) {
+  renderBox();
+}
 spaceid = spaceid.replace(/\/$/, "").slice(-21);
 
 fetch(`https://api.kinopio.club/space/${spaceid}/`, {
