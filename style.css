@@ -24,6 +24,44 @@ p > * {
   line-height: 1.2;
 }
 
+#controls {
+  position: fixed;
+  right: 0px;
+  top: calc(50vh - 85px);
+  z-index: 9999;
+
+  height: 170px;
+  display: grid;
+  grid-template-rows: 20px 60px 10px 60px 20px;
+
+  padding-right: 15px;
+  padding-left: 5px;
+  border-radius: 40px 0px 0px 40px;
+
+  background-color: white;
+  filter: drop-shadow(0px 0px 10px white) drop-shadow(0px 0px 15px white)
+    drop-shadow(0px 0px 10px white) drop-shadow(0px 0px 5px white);
+
+  > #previous,
+  > #next {
+    font-size: 50px;
+    line-height: 1;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 100px;
+
+    padding-inline: 10px;
+
+    filter: opacity(0.4);
+    transition: all 0.3s ease-in-out;
+  }
+
+  > #previous:hover,
+  > #next:hover {
+    filter: opacity(1);
+  }
+}
+
 #prefetch-indicator {
   position: fixed;
   bottom: 10px;

@@ -254,16 +254,46 @@ async function waitForSpaceAndRender() {
       if (currentIndex < boxIds.length - 1) {
         currentIndex++;
         renderBox(boxIds[currentIndex]);
+        updateNavigationButtons();
       }
       e.preventDefault();
     } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
       if (currentIndex > 0) {
         currentIndex--;
         renderBox(boxIds[currentIndex]);
+        updateNavigationButtons();
       }
       e.preventDefault();
     }
   });
+
+  document.getElementById("previous").addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderBox(boxIds[currentIndex]);
+      updateNavigationButtons();
+    }
+  });
+
+  document.getElementById("next").addEventListener("click", () => {
+    if (currentIndex < boxIds.length - 1) {
+      currentIndex++;
+      renderBox(boxIds[currentIndex]);
+      updateNavigationButtons();
+    }
+  });
+
+  function updateNavigationButtons() {
+    const prevBtn = document.getElementById("previous");
+    const nextBtn = document.getElementById("next");
+    prevBtn.textContent = currentIndex > 0 ? "↑" : "";
+    prevBtn.style.cursor = currentIndex > 0 ? "pointer" : "default";
+    nextBtn.textContent = currentIndex < boxIds.length - 1 ? "↓" : "";
+    nextBtn.style.cursor =
+      currentIndex < boxIds.length - 1 ? "pointer" : "default";
+  }
+
+  updateNavigationButtons();
 }
 
 waitForSpaceAndRender();
