@@ -72,8 +72,7 @@ function renderCard(cardDiv, card) {
     text = filteredLines.join("\n").trim();
   } else {
     cardDiv.style.width = card.width - 16 + "px"; // removing the connector width
-    cardDiv.style.transformOrigin = cardDiv.style.backgroundColor =
-      card.backgroundColor;
+    cardDiv.style.backgroundColor = card.backgroundColor;
     text = card.name;
   }
 
