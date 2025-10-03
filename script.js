@@ -72,7 +72,8 @@ function renderCard(cardDiv, card) {
     text = filteredLines.join("\n").trim();
   } else {
     cardDiv.style.width = card.width - 16 + "px"; // removing the connector width
-    cardDiv.style.backgroundColor = card.backgroundColor;
+    cardDiv.style.transformOrigin = cardDiv.style.backgroundColor =
+      card.backgroundColor;
     text = card.name;
   }
 
@@ -139,7 +140,7 @@ function renderBox(boxId) {
     if (card.name) {
       const cardDiv = document.createElement("div");
       cardDiv.style.transformOrigin = "top right";
-      cardDiv.style.transform = `translate(${card.x - cards.x}px, ${card.y - cards.y}px) rotate(${card.tilt}deg)`;
+      cardDiv.style.transform = `translate(${card.x - cards.x + 8}px, ${card.y - cards.y}px) rotate(${card.tilt}deg)`;
       cardDiv.style.zIndex = card.z;
       renderCard(cardDiv, card);
       slide.appendChild(cardDiv);
