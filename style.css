@@ -3,6 +3,10 @@ html {
   font-size: 15px;
 }
 
+body {
+  cursor: url(assets/cursor.png), auto;
+}
+
 p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
@@ -107,6 +111,7 @@ p > * {
 }
 
 #slide > div > .text {
-  margin-inline: 8px;
+  margin-left: 8px;
+  padding-right: 8px;
   width: fit-content;
 }
