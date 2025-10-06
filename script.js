@@ -120,7 +120,17 @@ function renderBox(boxId) {
   slide.innerHTML = "";
   slide.style.background = "none";
 
+  const slideTitle = document.getElementById("slide-title");
+  slideTitle.innerHTML = "";
+
   const cards = makeCards(boxId);
+
+  // render card title if it's meaningful
+  if (/^Box \d+$/.test(cards.name)) {
+    slideTitle.innerHTML = "";
+  } else {
+    slideTitle.innerHTML = `<p>${cards.name}</p>`;
+  }
 
   // render background
   slide.style.width = cards.width + "px";

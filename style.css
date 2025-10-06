@@ -57,7 +57,7 @@ p > * {
     padding-inline: 1vh;
 
     filter: opacity(0.4);
-    transition: all 0.3s ease-in-out;
+    transition: filter 0.3s ease-in-out;
   }
 
   > #previous:hover,
@@ -79,6 +79,28 @@ p > * {
 
   justify-items: center;
   align-items: center;
+}
+
+#slide-title {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+#slide-title > p {
+  font-size: 2em;
+  width: fit-content;
+
+  padding-inline: 2vh;
+  padding-top: 1vh;
+  border-radius: 0vh 0vh 4vh 4vh;
+
+  background-color: white;
+  filter: drop-shadow(0vh 0vh 1vh white) drop-shadow(0vh 0vh 1.5vh white)
+    drop-shadow(0vh 0vh 1vh white) drop-shadow(0vh 0vh 0.5vh white);
 }
 
 #slide {
