@@ -169,7 +169,9 @@ function renderBox(boxId) {
 // ---------------
 
 const urlParams = new URLSearchParams(window.location.search);
-let spaceid = urlParams.get("space") || "";
+let spaceid =
+  urlParams.get("space") ||
+  "https://kinopio.club/kn-vitrine-ZNXXsP5cFZ5712kFb1vON";
 if (!spaceid) {
   renderBox();
 }
