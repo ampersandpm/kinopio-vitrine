@@ -121,14 +121,15 @@ function renderBox(boxId) {
   slide.style.background = "none";
 
   const slideTitle = document.getElementById("slide-title");
-  slideTitle.innerHTML = "";
+  slideTitle.style.display = "none";
 
   const cards = makeCards(boxId);
 
   // render card title if it's meaningful
   if (/^Box \d+$/.test(cards.name)) {
-    slideTitle.innerHTML = "";
+    slideTitle.style.display = "none";
   } else {
+    slideTitle.style.display = "block";
     slideTitle.innerHTML = `<p>${cards.name}</p>`;
   }
 
@@ -158,9 +159,30 @@ function renderBox(boxId) {
 
   // linear scaling the slide to the screen size
   const scale = Math.min(
-    (window.innerWidth - 40) / cards.width,
-    (window.innerHeight - 40) / cards.height,
+    (window.innerWidth - 50) / cards.width,
+    (window.innerHeight - 50) / cards.height,
   );
+  if (window.innerWidth > cards.width && window.innerHeight > cards.height) {
+    slide.style.transformOrigin = "center";
+    slide.style.marginTop = "0px";
+    slide.style.marginLeft = "0px";
+  } else if (
+    window.innerWidth > cards.width &&
+    window.innerHeight < cards.height
+  ) {
+    slide.style.marginTop = "25px";
+    slide.style.transformOrigin = "top";
+  } else if (
+    window.innerWidth < cards.width &&
+    window.innerHeight > cards.height
+  ) {
+    slide.style.marginLeft = "5px";
+    slide.style.transformOrigin = "left";
+  } else {
+    slide.style.marginTop = `${window.innerHeight / 2 - (cards.height * scale) / 2}px`;
+    slide.style.marginLeft = `${window.innerWidth / 2 - (cards.width * scale) / 2}px`;
+    slide.style.transformOrigin = "top left";
+  }
   slide.style.transform = `scale(${scale})`;
 }
 
