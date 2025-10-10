@@ -82,6 +82,16 @@ function renderCard(cardDiv, card) {
     text = `<div class="text">${parseMarkdown(text)}</div>`;
   }
 
+  cardDiv.style.color = card.backgroundColor.startsWith("#")
+    ? (0.299 * parseInt(card.backgroundColor.slice(1, 3), 16) +
+        0.587 * parseInt(card.backgroundColor.slice(3, 5), 16) +
+        0.114 * parseInt(card.backgroundColor.slice(5, 7), 16)) /
+        255 >
+      0.4
+      ? "black"
+      : "white"
+    : "black";
+
   cardDiv.innerHTML = text;
 }
 
@@ -129,7 +139,7 @@ function renderBox(boxId) {
   if (/^Box \d+$/.test(cards.name)) {
     slideTitle.style.display = "none";
   } else {
-    slideTitle.style.display = "block";
+    slideTitle.style.display = "flex";
     slideTitle.innerHTML = `<p>${cards.name}</p>`;
   }
 
