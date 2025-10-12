@@ -218,6 +218,11 @@ async function render() {
       };
     }
 
+    // check if the card is a comment card
+    if (card.isComment) {
+      cardDiv.classList.add("comment");
+    }
+
     cardDiv.innerHTML = textContent;
   }
 

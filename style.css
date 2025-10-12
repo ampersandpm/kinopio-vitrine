@@ -19,6 +19,10 @@ a:visited {
   cursor: pointer;
 }
 
+.comment {
+  display: none !important;
+}
+
 a:hover {
   color: red;
 }
