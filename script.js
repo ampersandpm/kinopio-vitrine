@@ -189,7 +189,9 @@ async function render() {
       `header-font-family-${card.headerFontId}`,
       `header-font-size-${card.headerFontSize}`,
     );
-    cardDiv.style.color = calculateContrastColor(card.backgroundColor);
+    if (card.backgroundColor) {
+      cardDiv.style.color = calculateContrastColor(card.backgroundColor);
+    }
 
     if (imageUrl) {
       cardDiv.classList.add("image");
