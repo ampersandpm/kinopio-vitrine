@@ -5,24 +5,24 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="A read-only, box-by-box view of a Kinopio space." />
     <title>Vitrine</title>
     <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="controls">
-      <div></div>
-      <div id="previous"></div>
-      <div></div>
-      <div id="next"></div>
-      <div></div>
-    </div>
-    <div id="prefetch-indicator"></div>
-    <div id="slide-title"></div>
-    <div id="slide-wrapper">
-      <div id="slide"></div>
-    </div>
-    <script src="script.js"></script>
+    <nav id="controls" aria-label="Box navigation">
+      <button id="previous" type="button" aria-label="Previous box"></button>
+      <button id="next" type="button" aria-label="Next box"></button>
+    </nav>
+    <div id="status" role="status" aria-live="polite"></div>
+    <h1 id="slide-title" hidden></h1>
+    <main id="slide-wrapper">
+      <section id="slide" aria-label="Kinopio box"></section>
+    </main>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
